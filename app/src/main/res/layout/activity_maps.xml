@@ -1,0 +1,54 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff2b7ae8">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:id="@+id/startbutton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffff8a20" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:id="@+id/stopbutton"
+        android:layout_alignBottom="@+id/startbutton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#ffff8a20" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+        android:layout_height="440dp" android:id="@+id/map" tools:context=".MapsActivity"
+        android:layout_below="@+id/startbutton"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:layout="@layout/abc_action_bar_title_item"
+        android:enabled="true"
+        android:clickable="true"/>
+
+
+
+
+    <RadioGroup android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal" android:id="@+id/rg_views"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/rb_normal" android:checked="true" android:text="normal"/>
+
+        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/rb_satellite" android:text="satellite"/>
+
+        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/rb_terrain" android:text="terrain"/>
+
+    </RadioGroup>
+
+
+
+</RelativeLayout>
+
